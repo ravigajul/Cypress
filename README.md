@@ -3,7 +3,10 @@
  1. node -v
  2. npm -v
 ## Install depedencies
-  npm install ..This will download all the dev-dependencies from package.json
+This will download all the dev-dependencies from package.json
+ ```
+ npm install
+```
 ## Start the test application
   ```
   npm start
