@@ -80,3 +80,10 @@ it.only('second test',()=>{
 //some test
 })
 ```
+## Element location using parent child concept
+Parents method is to navigate to parent element from current element and find method is to locate child from that parent element
+```
+cy.get('#inputEmail3')
+    .parents('form')
+    .find('button')
+```
