@@ -5,11 +5,18 @@
 ## Install depedencies
   npm install ..This will download all the dev-dependencies from package.json
 ## Start the test application
+  ```
   npm start
-## Cypress installation
-  npm install cypress --save-dev //install & save the cypress as dev dependency in package.json  
+ ```
+## Cypress installation & save the cypress as dev dependency in package.json  
+  ```
+  npm install cypress --save-dev 
+  ```
 ## Open Cypress Runner
-  npx cypress open //installs a new folder cypress in root directory that has project folder structure with examples
+ //installs a new folder cypress in root directory that has project folder structure with examples
+ ```
+   npx cypress open
+ ```
   1. downloads 
   2. fixtures  //test data objects (json files most of the cases)
   3. integration  //main folder where the tests or specs are present
