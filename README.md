@@ -75,6 +75,8 @@ describe('Second test suite',()=>{
 ## Locators
 Cypress doesn have xpath as selector. It uses J-Query. We can optionally use xpath plugin for cypress to support xpath
 ## Run specific test
+```
 it.only('second test',()=>{
 //some test
 })
+```
