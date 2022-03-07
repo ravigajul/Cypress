@@ -41,4 +41,32 @@ This will download all the dev-dependencies from package.json
 ## Create First Test
 add a file under folder integration with extension .spec.js
 ex : firstTest.spec.js
- 
+## Test.spec.js Structure
+```
+describe('first test suite',()=>{
+    //nested describe is okay and allowed
+    beforeEach('code to run before every it',()=>{
+        //login functionality for example
+    })
+    it('first test',()=>{
+        //some test code
+    })
+
+    it('second test',()=>{
+        //some test code
+    })
+})
+
+describe('Second test suite',()=>{
+    beforeEach('code to run before every it',()=>{
+        //login functionality for example
+    })
+    it('first test',()=>{
+        //some test code
+    })
+
+    it('second test',()=>{
+        //some test code
+    })
+})
+```
