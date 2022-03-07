@@ -101,4 +101,10 @@ cy.get('#inputEmail3')
         cy.get('[for="inputEmail1"]').invoke('text').then(text=>{
             expect(text).to.equal('Email')
         })
+        
+        //method4 to check if the check box is checked
+        cy.contains('nb-card','Horizontal form').find('nb-checkbox').click()
+        .find('.custom-checkbox')
+        .invoke('attr','class')
+        .should('contain','checked')
    ```
