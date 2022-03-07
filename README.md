@@ -87,3 +87,18 @@ cy.get('#inputEmail3')
     .parents('form')
     .find('button')
 ```
+#Invoke method
+```
+        //method1
+        cy.get('[for="inputEmail1"]').should('contain','Email')
+        
+        //method2
+        cy.get('[for="inputEmail1"]').then(label=>{
+            expect(label.text()).to.equal('Email')
+        })
+
+        //method3
+        cy.get('[for="inputEmail1"]').invoke('text').then(text=>{
+            expect(text).to.equal('Email')
+        })
+   ```
