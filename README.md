@@ -42,7 +42,9 @@ This will download all the dev-dependencies from package.json
 add a file under folder integration with extension .spec.js
 ex : firstTest.spec.js
 ## Test.spec.js Structure
+reference types below allows vscode to support intellisense
 ```
+///<reference types = "cypress"/>
 describe('first test suite',()=>{
     //nested describe is okay and allowed
     beforeEach('code to run before every it',()=>{
