@@ -26,5 +26,17 @@ This will download all the dev-dependencies from package.json
   4. Plugins
   5. support 
   6. cypress.json //configuration files for changing default settings for cypress
+## ignore default examples
+ add the below lines in cypress.json
+ ```
+ {
+    "baserurl":"http://localhost:4200/",
+    "ignoreTestFiles":["**/1-getting-started/*", "**/2-advanced-examples/*"],
+    "viewportHeight":786,
+    "viewportWidth":1024
+}
+```
 ## Starting point
   under support --> index.js is the first file that the cypress looks at
+## First Test
+ 
