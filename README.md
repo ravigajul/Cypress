@@ -38,5 +38,7 @@ This will download all the dev-dependencies from package.json
 ```
 ## Starting point
   under support --> index.js is the first file that the cypress looks at
-## First Test
+## Create First Test
+add a file under folder integration with extension .spec.js
+ex : firstTest.spec.js
  
