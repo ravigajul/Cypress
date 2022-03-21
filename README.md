@@ -108,3 +108,5 @@ cy.get('#inputEmail3')
         .invoke('attr','class')
         .should('contain','checked')
    ```
+# Install cypress-cucumber-preprocessor
+https://www.npmjs.com/package/cypress-cucumber-preprocessor
