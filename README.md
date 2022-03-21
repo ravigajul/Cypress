@@ -109,4 +109,9 @@ cy.get('#inputEmail3')
         .should('contain','checked')
    ```
 # Install cypress-cucumber-preprocessor
-https://www.npmjs.com/package/cypress-cucumber-preprocessor
+1. https://www.npmjs.com/package/cypress-cucumber-preprocessor
+2. Add cypress configuration in cypress/plugins/index.js
+3. create a configuration for plugin by adding cypress-cucumber-preprocessor to package.json
+3.1. The .feature file will use steps definitions from a directory with the same name as your .feature file.
+
+
