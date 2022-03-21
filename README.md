@@ -113,5 +113,6 @@ cy.get('#inputEmail3')
 2. Add cypress configuration in cypress/plugins/index.js
 3. create a configuration for plugin by adding cypress-cucumber-preprocessor to package.json
 4. 3.1. The .feature file will use steps definitions from a directory with the same name as your .feature file.
+5. Execute the cucumber feature like in a similar way by opening cypress runner  npx cypress open
 
 
