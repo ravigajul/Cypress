@@ -16,3 +16,20 @@ Then('I validate if the new item is added',()=>{
       .last()
       .should('have.text', 'Feed the cat')
 })
+
+And('I retrieve the newly added item',()=>{
+  const newItem = 'Feed the cat'
+  cy.get('ul.todo-list label').eq(2) //getting the second item from the list
+  .should('have.text','Feed the cat')
+})
+
+And('I retrive the property by invoke methd',()=>{
+  cy.get('input.new-todo').invoke('prop','placeholder').should('contain','What needs to be done?')
+})
+
+And('I validate using wrap methd',()=>{
+  cy.get('ul.todo-list li').each(listItem=>{
+    const itemText=listItem.text()
+    cy.wrap(listItem).first().should('have.text',itemText)
+  })
+})

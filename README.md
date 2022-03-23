@@ -74,6 +74,10 @@ describe('Second test suite',()=>{
 ```
 ## Locators
 Cypress doesn have xpath as selector. It uses J-Query. We can optionally use xpath plugin for cypress to support xpath
+## Different ways of locating elements
+1. cy.get(<css>)
+2. cy.find(<css>)
+3. cy.contains(<css>) or cy.contains(<css>,<css>)
 ## Run specific test
 ```
 it.only('second test',()=>{
@@ -115,4 +119,19 @@ cy.get('#inputEmail3')
 4. 3.1. The .feature file will use steps definitions from a directory with the same name as your .feature file.
 5. Execute the cucumber feature like in a similar way by opening cypress runner  npx cypress open
 
+# Retrieve the elements based on index
+```
+  const newItem = 'Feed the cat'
+  cy.get('ul.todo-list label').eq(2) //getting the second item from the list
+  .should('have.text','Feed the cat')
 
+```
+# Retrieve the property value similar to getAttribute or getROProperty
+```
+cy.get('input.new-todo').invoke('prop','placeholder').should('contain','What needs to be done?')
+  
+```
+# Wrap method
+cy.wrap is used for switching context from JQuery format to Cypress format.
+```
+```
