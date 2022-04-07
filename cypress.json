@@ -6,7 +6,7 @@
         "**/2-advanced-examples/*"
     ],
     
-    "testFiles": "**/3-bdd/cucumbertest.feature",
+    "testFiles": "**/tempTest.js",
     "viewportHeight": 1080,
     "viewportWidth": 1920
 }
