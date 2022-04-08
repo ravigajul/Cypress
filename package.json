@@ -4,7 +4,13 @@
   "description": "1. node -v\r  2. npm -v\r ## Install depedencies\r This will download all the dev-dependencies from package.json\r  ```\r  npm install\r ```\r ## Start the test application\r   ```\r   npm start\r  ```\r ## Cypress installation & save the cypress as dev dependency in package.json  \r   ```\r   npm install cypress --save-dev \r   ```\r ## Open Cypress Runner\r  //installs a new folder cypress in root directory that has project folder structure with examples\r  ```\r    npx cypress open\r  ```\r   1. downloads \r   2. fixtures  //test data objects (json files most of the cases)\r   3. integration  //main folder where the tests or specs are present\r   4. Plugins\r   5. support \r   6. cypress.json //configuration files for changing default settings for cypress\r ## ignore default examples\r  add the below lines in cypress.json\r  ```\r  {\r     \"baserurl\":\"http://localhost:4200/\",\r     \"ignoreTestFiles\":[\"**/1-getting-started/*\", \"**/2-advanced-examples/*\"],\r     \"viewportHeight\":786,\r     \"viewportWidth\":1024\r }\r ```\r ## Starting point\r   under support --> index.js is the first file that the cypress looks at\r ## Create First Test\r add a file under folder integration with extension .spec.js\r ex : firstTest.spec.js\r ## Test.spec.js Structure\r reference types below allows vscode to support intellisense\r ```\r ///<reference types = \"cypress\"/>\r describe('first test suite',()=>{\r     //nested describe is okay and allowed\r     beforeEach('code to run before every it',()=>{\r         //login functionality for example\r     })\r     it('first test',()=>{\r         //some test code\r     })",
   "main": "index.js",
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "./",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "dependencies": {
     "aggregate-error": "^3.1.0",
@@ -28,7 +34,8 @@
     "yallist": "^4.0.0"
   },
   "devDependencies": {
-    "cypress": "^9.5.2"
+    "cypress": "^9.5.2",
+    "multiple-cucumber-html-reporter": "^1.19.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

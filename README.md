@@ -135,3 +135,19 @@ cy.get('input.new-todo').invoke('prop','placeholder').should('contain','What nee
 cy.wrap is used for switching context from JQuery format to Cypress format.
 ```
 ```
+
+## Add cucumber-html-report
+ 1. add the below dependency in package.json
+    ```
+    "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "./",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+    ```
+ 2. npm install --save-dev multiple-cucumber-html-reporter
+ 3. Create a cucumber-html-report.js
+ 4. Run after feature or in after hooks node ./cucumber-html-reporter.js 
