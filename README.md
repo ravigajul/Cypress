@@ -180,7 +180,15 @@ Narrowing down the scope to list of products and then to just product and get se
  cy.get('.products').find('.product').each($dl
  ```
  
-## Logging to cypress runne
+## Logging to cypress runner
  ```
  cy.log('your message')
  ```
+ 
+## Aliasing
+ aliasing so that same css selector is not used in multiple lines of parent.
+```
+cy.get('.products').as('productsLocator')
+cy.get('@productsLocator').find('').
+cy.get('@productsLocator').find('').
+```
