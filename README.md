@@ -181,6 +181,7 @@ Narrowing down the scope to list of products and then to just product and get se
  ```
  
 ## Logging to cypress runner
+ cy.log is a cypress command and is synchronous in nature. However console.log is javascript command and is not synchronous ..this needs to be put in .then to make it sync.
  ```
  cy.log('your message')
  ```
