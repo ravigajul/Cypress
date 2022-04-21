@@ -151,3 +151,7 @@ cy.wrap is used for switching context from JQuery format to Cypress format.
  2. npm install --save-dev multiple-cucumber-html-reporter
  3. Create a cucumber-html-report.js
  4. Run after feature or in after hooks node ./cucumber-html-reporter.js 
+## .get vs .find
+ .get the scope of this method is to search the entire page
+ .find will narrow down the scope and only searches within the descendant dom received by get 
+ cy.get(<someparent dom css>>).find(<<child css within parent dom>>)
