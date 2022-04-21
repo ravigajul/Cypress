@@ -174,3 +174,13 @@ Narrowing down the scope to list of products and then to just product and get se
     }
   })
  ```
+## Looping to array of elements using each
+ https://docs.cypress.io/api/commands/each#DOM-Elements
+ ```
+ cy.get('.products').find('.product').each($dl
+ ```
+ 
+## Logging to cypress runne
+ ```
+ cy.log('your message')
+ ```
