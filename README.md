@@ -195,3 +195,8 @@ cy.get('@productsLocator').find('').
 ```
 ## working iframes
  install and import cypress-iframe to work with iframes
+## Set env variable
+ ```
+ Cypress.env('token',response.body.access_token) //set environment variable
+ Cypress.env('token') //get environment variable.
+ ````
