@@ -193,7 +193,7 @@ cy.get('.products').as('productsLocator')
 cy.get('@productsLocator').find('').
 cy.get('@productsLocator').find('').
 ```
-## working iframes
+## working with iframes
  install and import cypress-iframe to work with iframes
 ## Set env variable
  ```
