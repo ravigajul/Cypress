@@ -155,3 +155,18 @@ cy.wrap is used for switching context from JQuery format to Cypress format.
  .get the scope of this method is to search the entire page
  .find will narrow down the scope and only searches within the descendant dom received by get 
  cy.get(someparent dom css).find(child css within parent dom)
+## conditional test
+ ```
+ cy.get('body').then(($body) => {
+    // synchronously ask for the body's text
+    // and do something based on whether it includes
+    // another string
+    if ($body.text().includes('some string')) {
+      // yup found it
+      cy.get(...).should(...)
+    } else {
+      // nope not here
+      cy.get(...).should(...)
+    }
+  })
+ ```
