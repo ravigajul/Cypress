@@ -155,7 +155,9 @@ cy.wrap is used for switching context from JQuery format to Cypress format.
  .get the scope of this method is to search the entire page
  .find will narrow down the scope and only searches within the descendant dom received by get 
  .contains will look for the text within that narrowed scope
-cy.get('.products').get('.product').eq(2).contains('ADD TO CART').click()
+```
+ cy.get('.products').get('.product').eq(2).contains('ADD TO CART').click()
+ ```
 Narrowing down the scope to list of products and then to just product and get second third element with index 2 and look for contains text and click it.
 ## conditional test
  ```
