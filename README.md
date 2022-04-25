@@ -227,3 +227,7 @@ fnAdd(3,5,(x)=>{
  ```
  node inspect ./test.js
  ```
+use this if there is error
+```
+ node --inspect-brk ./test.js
+``` 
