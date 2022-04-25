@@ -224,6 +224,7 @@ fnAdd(3,5,(x)=>{
  Add 'debugger' keyword before the line of code from where you want to debug.
  The console shows the port number, Open the browser with ip and port number
  navigate to developer tools to debug further. use chrome://inspect and click inspect
+ We can add folder on the dev tools opened and see console by clicking esc
  Run the node command with inspect 
  ```
  node inspect ./test.js
