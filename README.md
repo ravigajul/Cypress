@@ -220,3 +220,9 @@ fnAdd(3,5,(x)=>{
     console.log('The sume of numbers is ' + x)
 })
 ```
+## Debug 
+ Add 'debugger' keyword before the line of code from where you want to debug
+ Run the node command with inspect 
+ ```
+ node inspect ./test.js
+ ```
