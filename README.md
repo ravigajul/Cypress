@@ -253,3 +253,16 @@ Add the below code to index.d.ts file in support folder.
   }
 ```
 for more info on this refer to -https://github.com/cypress-io/cypress-example-todomvc#cypress-intellisense
+
+# Yesterday date in YYYY-MM-DD format.
+```
+const yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+console.log(yesterday.toLocaleDateString('en-CA'))
+```
+
+# Use {force:true} when the element is hidden
+```
+cy.get('#signInFormUsername', { timeout: 10000 }).eq(0)
+  .type('userName', { force: true })
+```

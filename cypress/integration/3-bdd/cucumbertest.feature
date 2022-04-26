@@ -3,6 +3,7 @@ Feature: This is a feature to demonstrate cucumber
 
 Background: This is background
 
+@testing
 Scenario: This is a test scenario
 Given I open cypress example page
 When I add new todo items
