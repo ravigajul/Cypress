@@ -159,6 +159,90 @@ cy.wrap is used for switching context from JQuery format to Cypress format.
     return (n<10?"0"+n:n)
 })
 ```
+## .get vs .find vs .contains
+ .get the scope of this method is to search the entire page
+ .find will narrow down the scope and only searches within the descendant dom received by get 
+ .contains will look for the text within that narrowed scope
+```
+ cy.get('.products').get('.product').eq(2).contains('ADD TO CART').click()
+ ```
+Narrowing down the scope to list of products and then to just product and get second third element with index 2 and look for contains text and click it.
+## conditional test
+ ```
+ cy.get('body').then(($body) => {
+    // synchronously ask for the body's text
+    // and do something based on whether it includes
+    // another string
+    if ($body.text().includes('some string')) {
+      // yup found it
+      cy.get(...).should(...)
+    } else {
+      // nope not here
+      cy.get(...).should(...)
+    }
+  })
+ ```
+## Looping to array of elements using each
+ https://docs.cypress.io/api/commands/each#DOM-Elements
+ ```
+ cy.get('.products').find('.product').each($dl
+ ```
+ 
+## Logging to cypress runner
+ cy.log is a cypress command and is synchronous in nature. However console.log is javascript command and is not synchronous ..this needs to be put in .then to make it sync.
+ ```
+ cy.log('your message')
+ ```
+ 
+## Aliasing
+ aliasing so that same css selector is not used in multiple lines of parent.
+```
+cy.get('.products').as('productsLocator')
+cy.get('@productsLocator').find('').
+cy.get('@productsLocator').find('').
+```
+## working with iframes
+ install and import cypress-iframe to work with iframes
+## Set env variable
+ ```
+ Cypress.env('token',response.body.access_token) //set environment variable
+ Cypress.env('token') //get environment variable.
+ ````
+## callback
+ ```
+ //This printS undefined as the fnAdd is not returning anything but setTimeout
+/* const fnAdd =(a,b)=>{
+    setTimeout(()=>{
+        return a+b
+    },2000)
+}
+console.log('The sume of numbers is ' + fnAdd(3,5)) */
+
+//Address the undefined return by using callback
+const fnAdd =(a,b,callback)=>{
+    setTimeout(()=>{
+        callback(a+b)
+    },2000)
+}
+fnAdd(3,5,(x)=>{
+    console.log('The sume of numbers is ' + x)
+})
+```
+## Debug 
+ 1. Add 'debugger' keyword before the line of code from where you want to debug.
+ 2. The console shows the port number, Open the browser with ip and port number
+ 3. navigate to developer tools to debug further. use chrome://inspect and click inspect
+ 4. We can add folder on the dev tools opened and see console by clicking esc
+ 5. Run the node command with inspect 
+ ```
+ node inspect ./test.js
+ ```
+use this if there is error
+```
+ node --inspect-brk ./test.js
+``` 
+6. enter restart in the terminal if you want to debug again.
+
 
 ## Display custom command in intellisense.
 Add the below code to index.d.ts file in support folder.
