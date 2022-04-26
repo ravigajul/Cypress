@@ -1,0 +1,82 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "This is a feature to demonstrate cucumber",
+    "line": 2,
+    "id": "this-is-a-feature-to-demonstrate-cucumber",
+    "tags": [],
+    "uri": "cucumbertest.feature",
+    "elements": [
+      {
+        "id": "this-is-a-feature-to-demonstrate-cucumber;this-is-a-test-scenario",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "This is a test scenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open cypress example page",
+            "result": {
+              "status": "passed",
+              "duration": 1650000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I add new todo items",
+            "result": {
+              "status": "passed",
+              "duration": 381000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I validate if the new item is added",
+            "result": {
+              "status": "passed",
+              "duration": 90000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I retrieve the newly added item",
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I retrive the property by invoke methd",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I validate using wrap methd",
+            "result": {
+              "status": "passed",
+              "duration": 223000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

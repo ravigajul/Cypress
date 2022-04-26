@@ -151,3 +151,21 @@ cy.wrap is used for switching context from JQuery format to Cypress format.
  2. npm install --save-dev multiple-cucumber-html-reporter
  3. Create a cucumber-html-report.js
  4. Run after feature or in after hooks node ./cucumber-html-reporter.js 
+
+## Add custom command
+ Add a custom command to commands.js under support folder. This accessible everywhere in the project
+ ```
+ Cypress.Commands.add('fnPad',(n)=>{
+    return (n<10?"0"+n:n)
+})
+```
+
+## Display custom command in intellisense.
+Add the below code to index.d.ts file in support folder.
+```declare namespace Cypress {
+    interface Chainable<Subject> {
+      fnPad(n:any): Chainable<any>
+    }
+  }
+```
+for more info on this refer to -https://github.com/cypress-io/cypress-example-todomvc#cypress-intellisense
