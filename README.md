@@ -268,3 +268,9 @@ cy.get('#signInFormUsername', { timeout: 10000 }).eq(0)
 ```
 # Pause and Resume 
  cy.pause() to pause the test and click play button on runner to resume.
+ 
+# Accessing a json property that has space
+ on azure vm when i'm trying to install PNF ..nothing is happening
+```
+ json.body[0].["Property name"]
+ ```
