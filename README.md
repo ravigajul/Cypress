@@ -282,7 +282,7 @@ Cypress.config("fileServerFolder")
 ```
 # Reading the data from csv file.
 1. install neat-csv dependency version 5.1.0
-2. import import neatCSV from "neat-csv"
+2. import neatCSV from "neat-csv"
 3. Read the csv file and access its properties.
 4. on click the button of Testhtml page, the csv will be downloaded to cypress/downloads folder
 5. access project directory through Cypress.config("fileServerFolder")
@@ -304,5 +304,5 @@ describe('This it download and validate csv file',()=>{
 })
 ```
 
-# Solve - Unexpected reserved word 'await' Error #
+# gSolve - Unexpected reserved word 'await' Error #
 The "unexpected reserved word await" error occurs when the await keyword is used inside of a function that was not marked as async. To use the await keyword inside of a function, mark the directly enclosing function as async.
