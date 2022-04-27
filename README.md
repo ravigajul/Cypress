@@ -266,3 +266,5 @@ console.log(yesterday.toLocaleDateString('en-CA'))
 cy.get('#signInFormUsername', { timeout: 10000 }).eq(0)
   .type('userName', { force: true })
 ```
+# Pause and Resume 
+ cy.pause() to pause the test and click play button on runner to resume.
