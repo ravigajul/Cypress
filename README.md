@@ -304,5 +304,5 @@ describe('This it download and validate csv file',()=>{
 })
 ```
 
-# gSolve - Unexpected reserved word 'await' Error #
+# Solve - Unexpected reserved word 'await' Error #
 The "unexpected reserved word await" error occurs when the await keyword is used inside of a function that was not marked as async. To use the await keyword inside of a function, mark the directly enclosing function as async.
