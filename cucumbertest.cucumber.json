@@ -10,69 +10,129 @@
       {
         "id": "this-is-a-feature-to-demonstrate-cucumber;this-is-a-test-scenario",
         "keyword": "Scenario",
-        "line": 6,
+        "line": 19,
         "name": "This is a test scenario",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@testing",
+            "line": 6
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I open cypress example page",
             "result": {
               "status": "passed",
-              "duration": 1650000000
+              "duration": 491000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 8,
+            "line": 9,
             "name": "I add new todo items",
             "result": {
               "status": "passed",
-              "duration": 381000000
+              "duration": 318000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 10,
             "name": "I validate if the new item is added",
             "result": {
               "status": "passed",
-              "duration": 90000000
+              "duration": 11000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 11,
+            "line": 12,
             "name": "I retrieve the newly added item",
             "result": {
               "status": "passed",
-              "duration": 68000000
+              "duration": 9000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 13,
-            "name": "I retrive the property by invoke methd",
+            "line": 16,
+            "name": "I validate using wrap methd 'Ravi'",
             "result": {
               "status": "passed",
-              "duration": 55000000
+              "duration": 26000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "this-is-a-feature-to-demonstrate-cucumber;this-is-a-test-scenario",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "This is a test scenario",
+        "tags": [
+          {
+            "name": "@testing",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I open cypress example page",
+            "result": {
+              "status": "passed",
+              "duration": 271000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I add new todo items",
+            "result": {
+              "status": "passed",
+              "duration": 293000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I validate if the new item is added",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 15,
-            "name": "I validate using wrap methd",
+            "line": 12,
+            "name": "I retrieve the newly added item",
             "result": {
               "status": "passed",
-              "duration": 223000000
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I validate using wrap methd 'Gajul'",
+            "result": {
+              "status": "passed",
+              "duration": 25000000
             }
           }
         ]

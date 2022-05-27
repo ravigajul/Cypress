@@ -25,11 +25,13 @@ And('I retrieve the newly added item',()=>{
 
 And('I retrive the property by invoke methd',()=>{
   cy.get('input.new-todo').invoke('prop','placeholder').should('contain','What needs to be done?')
+ 
 })
 
-And('I validate using wrap methd',()=>{
+And('I validate using wrap methd {string}',(name)=>{
   cy.get('ul.todo-list li').each(listItem=>{
     const itemText=listItem.text()
     cy.wrap(listItem).first().should('have.text',itemText)
+    cy.log(name)
   })
 })
