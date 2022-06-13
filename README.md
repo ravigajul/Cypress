@@ -189,10 +189,10 @@ cy.get('input.new-todo').invoke('prop','placeholder').should('contain','What nee
 cy.wrap is used for switching context from JQuery format to Cypress format.
 
 ```javascript
- cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
-        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
-        cy.get('.products').find('.product').each(($el,index,$list) => {
-            cy.wrap($el).find('h4.product-name').invoke('prop','innerText').then(text=>{
+  cy.visit('https://example.cypress.io/utilities')
+        cy.get('a.dropdown-toggle').click()
+        cy.get('ul.dropdown-menu').find('li a').each(($el,index,$list)=>{
+            cy.wrap($el).invoke('prop','innerText').then(text=>{
                 cy.log(text)
             })
         })
@@ -261,12 +261,12 @@ Narrowing down the scope to list of products and then to just product and get se
  <https://docs.cypress.io/api/commands/each#DOM-Elements>
 
  ```javascript
-cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
-        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
-        cy.get('.products').find('.product').each(($el,index,$list) => {
-            if($el.find('h4.product-name').text().includes('Beetroot')){
-                cy.wrap($el).find('button[type="button"]').click()
-            }
+  cy.visit('https://example.cypress.io/utilities')
+        cy.get('a.dropdown-toggle').click()
+        cy.get('ul.dropdown-menu').find('li a').each(($el,index,$list)=>{
+            cy.wrap($el).invoke('prop','innerText').then(text=>{
+                cy.log(text)
+            })
         })
  ```
 
@@ -420,24 +420,23 @@ The "unexpected reserved word await" error occurs when the await keyword is used
 ## JQuery vs Cypress elements
 
 ```javascript
-it('Getting inner text of an element through jquery element',()=>{
-        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
-        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
-        cy.get('.products').find('.product').each(($el,index,$list) => {
-          //.text() is a jquery method on jQuery element
-            if($el.find('h4.product-name').text().includes('Beetroot')){
-                cy.wrap($el).find('button[type="button"]').click()
-            }
-        })
-    })
-    it('Getting inner text of an element through cypress',()=>{
-        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
-        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
-        cy.get('.products').find('.product').each(($el,index,$list) => {
-          //invoke innerText property on Cypress
-            cy.wrap($el).find('h4.product-name').invoke('prop','innerText').then(text=>{
+ it('Cypress get inner text example',()=>{
+        cy.visit('https://example.cypress.io/utilities')
+        cy.get('a.dropdown-toggle').click()
+        cy.get('ul.dropdown-menu').find('li a').each(($el,index,$list)=>{
+          //cy.wrap($el) is a cypress element
+            cy.wrap($el).invoke('prop','innerText').then(text=>{
                 cy.log(text)
             })
+        })
+    })
+
+    it('Jquery get inner text example',()=>{
+        cy.visit('https://example.cypress.io/utilities')
+        cy.get('a.dropdown-toggle').click()
+        cy.get('ul.dropdown-menu').find('li a').each(($el,index,$list)=>{
+          //jquery element and .text() is jQuery method
+            cy.log($el.text())
         })
     })
 ```

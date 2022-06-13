@@ -17,4 +17,21 @@ describe('Geting inner text',()=>{
             })
         })
     })
+    it('Cypress get inner text example',()=>{
+        cy.visit('https://example.cypress.io/utilities')
+        cy.get('a.dropdown-toggle').click()
+        cy.get('ul.dropdown-menu').find('li a').each(($el,index,$list)=>{
+            cy.wrap($el).invoke('prop','innerText').then(text=>{
+                cy.log(text)
+            })
+        })
+    })
+
+    it('Jquery get inner text example',()=>{
+        cy.visit('https://example.cypress.io/utilities')
+        cy.get('a.dropdown-toggle').click()
+        cy.get('ul.dropdown-menu').find('li a').each(($el,index,$list)=>{
+            cy.log($el.text())
+        })
+    })
 })
