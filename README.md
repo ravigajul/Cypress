@@ -7,6 +7,9 @@
 6. Can view videos of entire test execution when run from cypress dashboard.
 7. Supports Chrome, Edge and Fireforx, IE & Electron
 8. Browser is executing the test and no proxy servers like driver server in selenium
+9. By default, when running cypress run from the CLI, we will launch all browsers headlessly.
+10. cypress run --headed //for headed mode. alternatively npx cypress open
+11. cypress run --browser chrome
 ## Check for node js installation
  1. node -v
  2. npm -v
