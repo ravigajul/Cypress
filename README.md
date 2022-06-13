@@ -6,6 +6,7 @@
 5. Report automatically takes the snapshots for before and after an operatoin is performed.
 6. Can view videos of entire test execution when run from cypress dashboard.
 7. Supports Chrome, Edge and Fireforx, IE & Electron
+8. Browser is executing the test and no proxy servers like driver server in selenium
 ## Check for node js installation
  1. node -v
  2. npm -v
