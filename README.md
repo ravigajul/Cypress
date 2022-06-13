@@ -440,3 +440,51 @@ The "unexpected reserved word await" error occurs when the await keyword is used
         })
     })
 ```
+
+## Alerts
+
+Cypress will auto accept the alerts. We can fire the window:alert event to get the string in the alert window.
+
+```javascript
+//getting text from alert window by invoking the window:alert event
+cy.on('window:alert',(str)=>{
+            cy.log(str)
+        })
+```
+
+## Validating text from alerts window
+
+```javascript
+const stub = cy.stub()
+cy.on('window:alert',stub)
+cy.get('input#alertbtn').click().then(()=>{
+expect(stub.getCall(0)).to.be.calledWith('Hello , share this practice page and share your knowledge')
+})
+```
+
+for more info see the below link
+<https://docs.cypress.io/api/events/catalog-of-events#Window-Alert>
+
+## Handling pages that open in new tab
+
+cypress sugggests removal of target=_blank attribute by using removeAttr in invoke command so that the page open in same tab instead of new tab.
+
+```javascript
+cy.get('#newtab').invoke('removeAttr','target').click()
+```
+
+## Browser Navigation
+
+```javascript
+cy.go('back')
+cy.go('forward')
+```
+
+## WebTable Navigation
+
+```javascript
+cy.get('table#product tr').find('td').each(($el,index,$list)=>{
+cy.log($el.text())
+})
+```
+
