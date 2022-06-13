@@ -36,7 +36,8 @@ This will download all the dev-dependencies from package.json
   3. integration  //main folder where the tests or specs are present
   4. Plugins //kind of listeners. config for listeners 
   5. support //reusable utilities in command.js inside this
-  6. cypress.json //configuration files for changing default settings for cypress
+  6. vidoes //for saving the vidoes captured during execution.
+  7. cypress.json //configuration files for changing default settings for cypress
 ## ignore default examples
  add the below lines in cypress.json
  ```
