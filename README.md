@@ -115,9 +115,9 @@ Cypress doesn have xpath as selector. It uses J-Query. We can optionally use xpa
 
 ## Different ways of locating elements
 
-1. cy.get(<css>)
-2. cy.find(<css>)
-3. cy.contains(<css>) or cy.contains(<css>,<css>)
+1. cy.get(css)
+2. cy.find(css)
+3. cy.contains(css) or cy.contains(css1,css2)
 
 ## Run specific test
 
@@ -137,7 +137,7 @@ cy.get('#inputEmail3')
     .find('button')
 ```
 
-# Invoke method
+## Invoke method
 
 ```javascript
         //method1
@@ -188,14 +188,11 @@ cy.get('input.new-todo').invoke('prop','placeholder').should('contain','What nee
 
 cy.wrap is used for switching context from JQuery format to Cypress format.
 
-```
-```
-
 ## Add cucumber-html-report
 
  1. add the below dependency in package.json
 
-    ```json
+    ```javascript
     "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "cucumberJson": {
@@ -288,7 +285,7 @@ cy.get('@productsLocator').find('').
 
 ## callback
 
- ```
+ ```javascript
  //This printS undefined as the fnAdd is not returning anything but setTimeout
  const fnAdd =(a,b)=>{
     setTimeout(()=>{
@@ -400,6 +397,6 @@ describe('This it download and validate csv file',()=>{
 })
 ```
 
-## Solve - Unexpected reserved word 'await' Error #
+## Solve - Unexpected reserved word 'await' Error
 
 The "unexpected reserved word await" error occurs when the await keyword is used inside of a function that was not marked as async. To use the await keyword inside of a function, mark the directly enclosing function as async.
