@@ -5,7 +5,7 @@
 4. Has the ability to mock server responses by intercepting the API calls in network layer.
 5. Report automatically takes the snapshots for before and after an operatoin is performed.
 6. Can view videos of entire test execution when run from cypress dashboard.
-7. Supports Chrome, Edge and Fireforx, IE & Electron
+7. Supports Chrome, Edge , Fireforx & Electron
 8. Browser is executing the test and no proxy servers like driver server in selenium
 9. By default, when running cypress run from the CLI, we will launch all browsers headlessly.
 10. cypress run --headed //for headed mode. alternatively npx cypress open
