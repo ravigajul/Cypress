@@ -192,7 +192,7 @@ cy.wrap is used for switching context from JQuery format to Cypress format.
 
  1. add the below dependency in package.json
 
-    ```javascript
+    ```config
     "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "cucumberJson": {
