@@ -1,4 +1,10 @@
 # Cypress
+1. Cypress will wait for the state of element to be stable before it actually performs any operation on an element.
+2. The default timeout is 4 seconds and it can be reconfigured to any other value.
+3. Can perform the operations on hidden element by forcing the operation.
+4. Has the ability to mock server responses by intercepting the API calls in network layer.
+5. Report automatically takes the snapshots for before and after an operatoin is performed.
+6. Can view videos of entire test execution when run from cypress dashboard.
 ## Check for node js installation
  1. node -v
  2. npm -v
