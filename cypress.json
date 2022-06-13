@@ -6,7 +6,7 @@
         "**/2-advanced-examples/*"
     ],
     
-    "testFiles": "**/3-bdd/*.feature",
+    "testFiles": "**/5-usecases/*.js",
     "viewportHeight": 1080,
     "viewportWidth": 1920
 }

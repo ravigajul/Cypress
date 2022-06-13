@@ -188,6 +188,16 @@ cy.get('input.new-todo').invoke('prop','placeholder').should('contain','What nee
 
 cy.wrap is used for switching context from JQuery format to Cypress format.
 
+```javascript
+ cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
+        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
+        cy.get('.products').find('.product').each(($el,index,$list) => {
+            cy.wrap($el).find('h4.product-name').invoke('prop','innerText').then(text=>{
+                cy.log(text)
+            })
+        })
+```
+
 ## Add cucumber-html-report
 
  1. add the below dependency in package.json
@@ -251,7 +261,13 @@ Narrowing down the scope to list of products and then to just product and get se
  <https://docs.cypress.io/api/commands/each#DOM-Elements>
 
  ```javascript
- cy.get('.products').find('.product').each($dl
+cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
+        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
+        cy.get('.products').find('.product').each(($el,index,$list) => {
+            if($el.find('h4.product-name').text().includes('Beetroot')){
+                cy.wrap($el).find('button[type="button"]').click()
+            }
+        })
  ```
 
 ## Logging to cypress runner
@@ -400,3 +416,28 @@ describe('This it download and validate csv file',()=>{
 ## Solve - Unexpected reserved word 'await' Error
 
 The "unexpected reserved word await" error occurs when the await keyword is used inside of a function that was not marked as async. To use the await keyword inside of a function, mark the directly enclosing function as async.
+
+## JQuery vs Cypress elements
+
+```javascript
+it('Getting inner text of an element through jquery element',()=>{
+        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
+        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
+        cy.get('.products').find('.product').each(($el,index,$list) => {
+          //.text() is a jquery method on jQuery element
+            if($el.find('h4.product-name').text().includes('Beetroot')){
+                cy.wrap($el).find('button[type="button"]').click()
+            }
+        })
+    })
+    it('Getting inner text of an element through cypress',()=>{
+        cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
+        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
+        cy.get('.products').find('.product').each(($el,index,$list) => {
+          //invoke innerText property on Cypress
+            cy.wrap($el).find('h4.product-name').invoke('prop','innerText').then(text=>{
+                cy.log(text)
+            })
+        })
+    })
+```
