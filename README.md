@@ -5,6 +5,7 @@
 4. Has the ability to mock server responses by intercepting the API calls in network layer.
 5. Report automatically takes the snapshots for before and after an operatoin is performed.
 6. Can view videos of entire test execution when run from cypress dashboard.
+7. Supports Chrome, Edge and Fireforx, IE & Electron
 ## Check for node js installation
  1. node -v
  2. npm -v
