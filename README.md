@@ -498,6 +498,8 @@ var strWithCommas = number.toLocaleString("en-US")
 console.log(strWithCommas) //1,849
 
 //string without commas
+//The RegExp \D Metacharacter in JavaScript is used to search non digit characters i.e all the characters except digits. It is same as [^0-9].
+//g globally replace with ''
 var strWithouCommas=strWithCommas.replace(/\D/g,'')
 console.log(strWithouCommas) //1849
 
