@@ -487,4 +487,20 @@ cy.get('table#product tr').find('td').each(($el,index,$list)=>{
 cy.log($el.text())
 })
 ```
+## Parse locale String to Integer
 
+```javascript
+var number =1849
+console.log(number) //1849
+
+//locale string
+var strWithCommas = number.toLocaleString("en-US")
+console.log(strWithCommas) //1,849
+
+//string without commas
+var strWithouCommas=strWithCommas.replace(/\D/g,'')
+console.log(strWithouCommas) //1849
+
+//number
+console.log(parseInt(strWithouCommas)) //1849
+```
