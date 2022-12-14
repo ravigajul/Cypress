@@ -298,6 +298,8 @@ cy.get('@productsLocator').find('').
  Cypress.env('token',response.body.access_token) //set environment variable
  Cypress.env('token') //get environment variable.
  ````
+## slow typing
+cy.get('').type('something',{delay: 50})
 
 ## callback
 
