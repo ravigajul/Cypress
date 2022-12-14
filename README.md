@@ -574,3 +574,8 @@ cy.get('#userbutton').screenshot()
 cy.get('#button').scrollIntoView()
 cy.get('header').scrollIntoView()
 ```
+## Command line execution of single spec file in headless mode
+This runs the specs in headless mode and also generates a video at the end of the execution.
+```javascript
+npx cypress run --spec="cypress\e2e\2-advanced-examples\actions.cy.js"
+```
