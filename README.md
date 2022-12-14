@@ -561,3 +561,10 @@ cy.clearCookies()
 cy.clearLocalStorage()
 cy.visit('http://example.com')
 ```
+## Taking Screenshots
+```javascript
+//fullpage screenshot
+cy.screenshot({capture: 'fullpage'})
+//element screenshot
+cy.get('#userbutton').screenshot()
+```
