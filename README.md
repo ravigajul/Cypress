@@ -568,3 +568,9 @@ cy.screenshot({capture: 'fullpage'})
 //element screenshot
 cy.get('#userbutton').screenshot()
 ```
+
+## Scrolling
+```javascript
+cy.get('#button').scrollIntoView()
+cy.get('header').scrollIntoView()
+```
