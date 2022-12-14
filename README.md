@@ -555,3 +555,9 @@ This is to see how our application looks at different resolutions and devices
 })
 
 ```
+## Clear Cookies & Local Storage
+```javascript
+cy.clearCookies()
+cy.clearLocalStorage()
+cy.visit('http://example.com')
+```
