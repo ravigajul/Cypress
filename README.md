@@ -608,4 +608,7 @@ module.exports = defineConfig({
 ## video recording will be placed in the videos folder by running the below command.And screenshots as specified in config
 ```javascript
 .\node_modules\.bin\cypress run --spec .\cypress\e2e\3-CypressDemo\2.viewport.cy.js
+//to run in chrome
+.\node_modules\.bin\cypress run --browser chrome --spec .\cypress\e2e\3-CypressDemo\2.viewport.cy.js
+
 ```
