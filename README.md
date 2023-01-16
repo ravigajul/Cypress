@@ -16,6 +16,7 @@
 ES6 Mocha Snippets
 Material Icon Theme 
 Cypress Helper by Shevtsov
+Chai Snippets Nick Hatt
 View - > Command Pallete - > ReloadWindows
 ## Check for node js installation
 
