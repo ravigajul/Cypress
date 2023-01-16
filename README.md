@@ -591,19 +591,21 @@ npx cypress run --spec="cypress\e2e\2-advanced-examples\actions.cy.js"
 ## cypress.config.json 
 ```json
 const { defineConfig } = require("cypress");
+
 module.exports = defineConfig({
   e2e: {
       //implement node event listeners here
       baseUrl:'https://example.cypress.io',
       specPattern: "cypress/e2e/3-CypressDemo/*.js",
       screenshotOnRunFailure: true,
+      screenshotsFolder: 'cypress/screenshots',
         //clears the screnshots folder
        trashAssetsBeforeRuns: true
   }
 });
 ```
 
-## video recording will be placed in the videos folder by running the below command
+## video recording will be placed in the videos folder by running the below command.And screenshots as specified in config
 ```javascript
 .\node_modules\.bin\cypress run --spec .\cypress\e2e\3-CypressDemo\2.viewport.cy.js
 ```
