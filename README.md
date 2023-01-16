@@ -588,3 +588,22 @@ This runs the specs in headless mode and also generates a video at the end of th
 ```javascript
 npx cypress run --spec="cypress\e2e\2-advanced-examples\actions.cy.js"
 ```
+## cypress.config.json 
+```json
+const { defineConfig } = require("cypress");
+module.exports = defineConfig({
+  e2e: {
+      //implement node event listeners here
+      baseUrl:'https://example.cypress.io',
+      specPattern: "cypress/e2e/3-CypressDemo/*.js",
+      screenshotOnRunFailure: true,
+        //clears the screnshots folder
+       trashAssetsBeforeRuns: true
+  }
+});
+```
+
+## video recording will be placed in the videos folder by running the below command
+```javascript
+.\node_modules\.bin\cypress run --spec .\cypress\e2e\3-CypressDemo\2.viewport.cy.js
+```
