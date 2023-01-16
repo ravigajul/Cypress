@@ -12,6 +12,10 @@
 10. cypress run --headed //for headed mode. alternatively npx cypress open
 11. cypress run --browser chrome
 
+## Extensions for Visual Studio
+ES6 Mocha Snippets
+Material Icon Theme 
+View - > Command Pallete - > ReloadWindows
 ## Check for node js installation
 
  1. node -v
