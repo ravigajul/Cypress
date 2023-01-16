@@ -13,10 +13,9 @@
 11. cypress run --browser chrome
 
 ## Extensions for Visual Studio
-ES6 Mocha Snippets
-Material Icon Theme 
-Cypress Helper by Shevtsov
-Chai Snippets Nick Hatt
+ES6 Mocha Snippets<br>
+Material Icon Theme <br>
+Cypress Helper by Andrew Smith < br>
 View - > Command Pallete - > ReloadWindows
 ## Check for node js installation
 
