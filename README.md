@@ -15,6 +15,7 @@
 ## Extensions for Visual Studio
 ES6 Mocha Snippets
 Material Icon Theme 
+Cypress Helper by Shevtsov
 View - > Command Pallete - > ReloadWindows
 ## Check for node js installation
 
