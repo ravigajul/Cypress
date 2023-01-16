@@ -14,8 +14,10 @@
 
 ## Extensions for Visual Studio
 ES6 Mocha Snippets<br>
-Material Icon Theme <br>
-Cypress Helper by Andrew Smith < br>
+Material Icon Theme<br>
+Cypress Helper by Andrew Smith<br>
+Add this as first line for intellisense to work<br>
+///<reference  types="cypress"/><br>
 View - > Command Pallete - > ReloadWindows
 ## Check for node js installation
 
