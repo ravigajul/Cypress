@@ -627,3 +627,12 @@ describe('Browser only test', () => {
     });
 });
 ```
+## Handle shadow dom
+```javascript
+it('Handle shadow dom test', () => {
+        cy.visit('https://radogado.github.io/shadow-dom-demo/')
+
+        //is inside a shadow root hence fails
+        cy.get('#app').shadow().find('#container').should('have.text','Content in the shadow, without style leaksDynamically generated content')
+    });
+ ```
