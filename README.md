@@ -611,5 +611,5 @@ module.exports = defineConfig({
 //to run in chrome
 .\node_modules\.bin\cypress run --browser chrome --spec .\cypress\e2e\3-CypressDemo\2.viewport.cy.js
 or npn run cy:run with the script updated as below in package.json
-"cy:run": "npx cypress run cypress/e2e/3-CypressDemo/4.actions.cy.js --browser electron"
+"cy:runspec": "npx cypress run --browser electron --spec cypress/e2e/3-CypressDemo/4.actions.cy.js "
 ```
