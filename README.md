@@ -613,3 +613,17 @@ module.exports = defineConfig({
 or npn run cy:run with the script updated as below in package.json
 "cy:runspec": "npx cypress run --browser electron --spec cypress/e2e/3-CypressDemo/4.actions.cy.js "
 ```
+
+## configure a test to either execute/ not execute on a praticular browser only.
+```javascript
+describe('Browser only test', () => {
+    it('chrome only',{browser:"chrome"}, () => {
+        //executes when browser is chrome
+        cy.visit('https://example.cypress.io/commands/actions')
+    });
+    it('chrome only',{browser:"!chrome"}, () => {
+        //executes when browser is other than chrome
+        cy.visit('https://example.cypress.io/commands/actions')
+    });
+});
+```
