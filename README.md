@@ -652,7 +652,29 @@ it('Handle shadow dom test', () => {
 ## Cypress Environment Variables
 1. Cypress.config.js
 2. Cypress.env.json
+3. Command Line
+4. CYPRESS_
+5. Test Configuration
 ```javascript
 Cypress.env('cyConfigBaseUrl')
 Cypress.env('user').firstname //accessing nested variables. supported in cypress.env.json file
+cypress run --env host=kevin.dev.local,api_server=http://localhost:8888/api/v1 //CLI
+export CYPRESS_VIEWPORT_WIDTH=800
+export CYPRESS_VIEWPORT_HEIGHT=600 //Using keyword CYPRESS_
+// change environment variable for single suite of tests
+describe(
+  'test against Spanish content',
+  {
+    env: {
+      language: 'es',
+    },
+  },
+  () => {
+    it('displays Spanish', () => {
+      cy.visit(`https://docs.cypress.io/${Cypress.env('language')}/`)
+      cy.contains('¿Por qué Cypress?')
+    })
+  }
+)
+
 ```
