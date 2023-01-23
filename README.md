@@ -649,3 +649,10 @@ it('Handle shadow dom test', () => {
     "cy:parallel": "npm run cy:runspec --browser chrome --group CHROME  --ci-build-id 1 & npm run cy:runspec --browser edge --group EDGE & npm run cy:runspec --browser electron --group ELECTRON"
   }
 ```
+## Cypress Environment Variables
+1. Cypress.config.js
+2. Cypress.env.json
+```javascript
+Cypress.env('cyConfigBaseUrl')
+Cypress.env('user').firstname //accessing nested variables. supported in cypress.env.json file
+```
