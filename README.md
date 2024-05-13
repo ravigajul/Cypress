@@ -145,7 +145,11 @@ cy.get('#inputEmail3')
     .parents('form')
     .find('button')
 ```
-
+## CLick confirm or cancel on window popup
+```javascript
+cy.on('window:confirm', () => true); // Simulate clicking the 'OK' button
+cy.on('window:confirm', () => false); // Simulate clicking 'Cancel'
+```
 ## Invoke method
 
 ```javascript
